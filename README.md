@@ -6,7 +6,6 @@
 
 👉 **[https://fatefoundme.github.io/Puppet-Soccer](https://fatefoundme.github.io/Puppet-Soccer)**
 
-> 如果 404，去仓库 Settings → Pages → Branch 选 `master` → Save，等一分钟即可。
 
 ## 操作
 
