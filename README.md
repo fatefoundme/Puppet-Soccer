@@ -1,35 +1,26 @@
 # 傀儡足球 — 2026世界杯
-   
-1v1 傀儡物理足球对战游戏。两个傀儡角色在球场上拼抢、跳跃、踢球，利用物理碰撞制造各种搞笑场面。
-   
-快速体验
-   
-**在线玩**：👉 [https://fatefoundme.github.io/Puppet-Soccer](https://fatefoundme.github.io/Puppet-Soccer)
 
-*如果链接打不开，说明 GitHub Pages 还没开启。在仓库 Settings → Pages → Source 选 `master` 分支 → Save，等一分钟即可。*
+1v1 傀儡物理足球对战。两个傀儡球员在球场上拼抢、跳跃、踢球，物理碰撞制造各种搞笑场面。
 
-**本地玩**：下载整个仓库，浏览器直接打开 `index.html`（不需要安装任何东西）。
+## 在线体验
+
+👉 **[https://fatefoundme.github.io/Puppet-Soccer](https://fatefoundme.github.io/Puppet-Soccer)**
+
+> 如果 404，去仓库 Settings → Pages → Branch 选 `master` → Save，等一分钟即可。
 
 ## 操作
 
-| 动作 | 玩家1 | 玩家2 |
-| 动作 | 玩家1 | 玩家2 |
-|------|-------|-------|
+| 动作 | P1 | P2 |
+|------|-----|-----|
 | 左移 | A | ← |
 | 右移 | D | → |
 | 跳跃 | W | ↑ |
 | 踢球 | S | ↓ |
 
-## 技术实现
+## 技术
 
-纯前端 Canvas 2D，零依赖，手写运动学物理引擎：
+纯前端 Canvas 2D · 手写运动学物理引擎 · CCD 碰撞检测 · 零依赖
 
-- 加速度/阻力/重力/碰撞反弹
-- CCD 连续碰撞检测（防高速穿模）
-- 头-身分离碰撞（圆-矩形 + AABB扫掠）
-- 60fps 游戏循环，固定时间步长
+## 素材
 
-## 素材来源
-
-球员贴纸素材来源于 B站 [james0602]
-
+球员贴纸素材来源于 B站 [james0602](https://space.bilibili.com/55873408)
