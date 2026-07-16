@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>Test</title>
+<style>body{margin:0;background:#000;display:flex;justify-content:center;align-items:center;height:100vh}canvas{border:2px solid #0f0}</style>
+</head><body>
+<canvas id="g" width="800" height="500"></canvas>
+<script type="module">
+const c = document.getElementById('g');
+const x = c.getContext('2d');
+let bx = 400, by = 250, bvx = 3, bvy = 2, py = 400, pvx = 0, jumping = false, vy = 0;
+
+x.fillStyle = '#fff';
+x.font = '20px Arial';
+x.fillText('Testing...', 10, 30);
+
+const keys = {};
+window.onkeydown = e => { keys[e.code] = true; e.preventDefault(); };
+window.onkeyup = e => { keys[e.code] = false; };
+
+function loop() {
+  // 移动
+  if (keys['KeyA']) pvx -= 0.5;
+  if (keys['KeyD']) pvx += 0.5;
+  if (!keys['KeyA'] && !keys['KeyD']) pvx *= 0.85;
+  if (Math.abs(pvx) > 6) pvx = Math.sign(pvx) * 6;
+  if (keys['KeyW'] && py >= 400) { vy = -12; jumping = true; }
+
+  vy += 0.7;
+  py += vy;
+  if (py >= 400) { py = 400; vy = 0; jumping = false; }
+  bx += bvx; by += bvy;
+  if (bx < 10 || bx > 790) bvx *= -1;
+  if (by < 10 || by > 490) bvy *= -1;
+  if (Math.abs(bx - (400 + pvx * 10)) < 30 && Math.abs(by - py) < 30) {
+    bvx = (bx - 400) * 0.2; bvy = -8;
+  }
+
+  // 画
+  x.fillStyle = '#2d8a2d'; x.fillRect(0, 0, 800, 500);
+  x.fillStyle = '#5a3a1a'; x.fillRect(0, 420, 800, 80);
+  x.fillStyle = '#4488ff'; x.fillRect(375 + pvx * 10, py - 40, 40, 40);
+  x.fillStyle = '#f5c6a0'; x.beginPath(); x.arc(395 + pvx * 10, py - 55, 18, 0, Math.PI*2); x.fill();
+  x.fillStyle = '#222'; x.beginPath(); x.arc(bx, by, 15, 0, Math.PI*2); x.fill();
+  x.fillStyle = '#fff'; x.font = '14px Arial'; x.fillText('AD移动 W跳跃', 10, 470);
+  x.fillText('px:' + pvx.toFixed(1) + ' py:' + py.toFixed(0), 10, 490);
+
+  requestAnimationFrame(loop);
+}
+loop();
+</script>
+</body></html>
