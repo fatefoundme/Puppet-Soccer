@@ -1,11 +1,11 @@
-   1 # 傀儡足球 — 2026世界杯
-   2
-   3 1v1 傀儡物理足球对战游戏。两个傀儡角色在球场上拼抢、跳跃、踢球，利用物理碰撞制造各种搞笑场面。
-   4
-   5 ## 快速体验
-   6
-   7 **在线玩**：👉 [https://fatefoundme.github.io/Puppet-Soccer](https://fatefoundme.github.io/Puppet-Soccer)
-   8
+# 傀儡足球 — 2026世界杯
+   
+1v1 傀儡物理足球对战游戏。两个傀儡角色在球场上拼抢、跳跃、踢球，利用物理碰撞制造各种搞笑场面。
+   
+快速体验
+   
+**在线玩**：👉 [https://fatefoundme.github.io/Puppet-Soccer](https://fatefoundme.github.io/Puppet-Soccer)
+
    9 *如果链接打不开，说明 GitHub Pages 还没开启。在仓库 Settings → Pages → Source 选 `master` 分支 → Save，等一分钟
      即可。*
   10
