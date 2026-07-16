@@ -28,17 +28,13 @@
 │   ├── player.js      球员类（移动 / 跳跃 / 踢球 / 碰撞检测）
 │   ├── ball.js        足球类（重力 / 反弹 / 进球判定 / CCD）
 │   ├── input.js       键盘输入管理
-│   ├── ai.js          AI 对手逻辑（已弃用）
 │   ├── renderer.js    画布渲染（场地 / 球员贴图 / HUD）
 │   ├── storage.js     LocalStorage 存取
 │   ├── data/
 │   │   └── teams.js   球队配置（名称 / 颜色）
 │   └── scenes/
 │       ├── menu.js      主菜单
-│       ├── match.js     比赛核心（倒计时 / 计分 / 开球）
-│       ├── teamSelect.js  选队界面（已弃用）
-│       ├── result.js    赛后结果（已弃用）
-│       └── shop.js      角色商店（已弃用）
+│       └── match.js     比赛核心（倒计时 / 计分 / 开球）
 └── assets/
     ├── player_*.png   球员贴图（6个）
     ├── *.png          队徽（6个）
